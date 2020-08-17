@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block title %} IP Finder {% endblock %}
+
+
+
+{% block body %}
+
+
+ <div class="container">
+
+     <br>
+     <br>
+
+        <h1>Sanic IP Finder</h1>
+
+     <br>
+     <br>
+
+     <form action="{{url_for('index')}}" method="post">
+  <div class="form-group">
+
+    <input type="text" class="form-control" name="search" placeholder = "Enter IP Addres ">
+
+  </div>
+
+
+  <input type="submit" class="btn btn-primary" value="Search">
+</form>
+
+<br>
+ <br>
+
+
+    <p> IP Address is : {{data.ip}}</p>
+     <p> City Location is : {{data.city}}</p>
+     <p> IP Country is : {{data.country}}</p>
+   <p> Available Languages : {{data.languages}}</p>
+   <p>Latitude Information Is : {{data.latitude}}</p>
+   <p>Longtitude Information Is : {{data.longitude}}</p>
+   <p>Time Zone Information Is : {{data.timezone}}</p>
+   <p>Availble Calling Code : {{data.country_calling_code}}</p>
+   <p>Available Currency Is : {{data.currency}}</p>
+   <p>Internet Network Is : {{data.org}}</p>
+   </div>
+
+
+{% endblock %}
